@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "livesense.livesense.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ChatMessageC2SPacketAccessor",
+    "ClientPlayNetworkHandlerMixin",
+    "KeyboardMixin",
+    "MinecraftClientMixin",
+    "MixinInGameHud",
+    "PlayerMoveC2SPacketAccessor"
+
+
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
