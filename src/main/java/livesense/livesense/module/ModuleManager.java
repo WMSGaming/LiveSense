@@ -19,6 +19,7 @@ public class ModuleManager {
         modules.add(new NoFall());
         modules.add(new CrystalTriggerBot());
         modules.add(new BoatExecuter());
+        modules.add(new HasteSpoof());
 
     }
 
