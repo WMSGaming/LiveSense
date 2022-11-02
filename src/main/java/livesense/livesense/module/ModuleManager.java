@@ -16,9 +16,9 @@ public class ModuleManager {
         modules.add(new ChatSuffix());
         modules.add(new PacketFly());
         modules.add(new SurvivalSpoof());
-        modules.add(new ClickGuiModule());
         modules.add(new NoFall());
         modules.add(new CrystalTriggerBot());
+        modules.add(new BoatExecuter());
 
     }
 

@@ -9,8 +9,8 @@
     "KeyboardMixin",
     "MinecraftClientMixin",
     "MixinInGameHud",
-    "PlayerMoveC2SPacketAccessor"
-
+    "PlayerMoveC2SPacketAccessor",
+    "VehicleMoveC2SPacketAccessor"
 
   ],
   "client": [

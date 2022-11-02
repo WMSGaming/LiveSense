@@ -5,8 +5,8 @@ import livesense.livesense.module.Module;
 import livesense.livesense.module.ModuleManager;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
-
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.Comparator;
 
 
@@ -18,15 +18,26 @@ public class Hud {
         mc.textRenderer.drawWithShadow(matrixStack, LiveSense.NAME + " [" + mc.getSession().getUsername() + "]",2,2,color);
 
 
+        /**
+         *      int y = 15;
+         *         ModuleManager.getModules().sort(Comparator.comparingInt((Module module) -> module.getName().length()).reversed());
+         *         for(Module m : ModuleManager.getModules()) {
+         *
+         *             if(m.isToggled()){
+         *                 mc.textRenderer.drawWithShadow(matrixStack, m.getName(),2,y,color);
+         *                 y+=mc.textRenderer.fontHeight+1;
+         *             }
+         *         }
+         */
+
 
         int y = 15;
         ModuleManager.getModules().sort(Comparator.comparingInt((Module module) -> module.getName().length()).reversed());
         for(Module m : ModuleManager.getModules()) {
 
-            if(m.isToggled()){
-                mc.textRenderer.drawWithShadow(matrixStack, m.getName(),2,y,color);
-                y+=mc.textRenderer.fontHeight+1;
-            }
+            mc.textRenderer.drawWithShadow(matrixStack, m.getName() + " [" + KeyEvent.getKeyText(m.getBind())+"]",2,y,m.isToggled() ? color : -1);
+            y+=mc.textRenderer.fontHeight+1;
+
         }
     }
 }
