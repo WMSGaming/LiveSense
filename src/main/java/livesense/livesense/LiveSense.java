@@ -60,4 +60,11 @@ public class LiveSense implements ModInitializer {
             }
         }
     }
+    public void onPacketReceive(Packet<?> packet) {
+        for(Module m : ModuleManager.getModules()){
+            if(m.isToggled()) {
+                m.onPacketReceive(packet);
+            }
+        }
+    }
 }

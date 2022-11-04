@@ -18,8 +18,11 @@ public class ModuleManager {
         modules.add(new SurvivalSpoof());
         modules.add(new NoFall());
         modules.add(new CrystalTriggerBot());
-        modules.add(new BoatExecuter());
+        //modules.add(new BoatExecuter());
         modules.add(new HasteSpoof());
+        modules.add(new NetherClip());
+        modules.add(new NoWorldBorder());
+
 
     }
 
@@ -29,14 +32,20 @@ public class ModuleManager {
 
 
     public static List<Module> getModulesInCategory(Module.Category c) {
-
         List<Module> modulesInCat = new ArrayList<>();
-
         for(Module m :  modules)  {
             if(m.getCategory() == c){
                 modulesInCat.add(m);
             }
         }
         return modulesInCat;
+    }
+    public static Module getModulebyName(String module) {
+        for(Module m : modules) {
+            if(m.getName().equalsIgnoreCase(module)){
+                return m;
+            }
+        }
+        return null;
     }
 }

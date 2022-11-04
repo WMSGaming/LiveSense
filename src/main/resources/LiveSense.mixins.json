@@ -10,7 +10,8 @@
     "MinecraftClientMixin",
     "MixinInGameHud",
     "PlayerMoveC2SPacketAccessor",
-    "VehicleMoveC2SPacketAccessor"
+    "VehicleMoveC2SPacketAccessor",
+    "ClientConnectionMixin"
 
   ],
   "client": [

@@ -14,8 +14,6 @@ public class ClientPlayNetworkHandlerMixin {
 
     @Inject(method = "sendPacket", at = @At("HEAD"), cancellable = true)
     private void onSendPacket(Packet<?> packet, CallbackInfo callback){
-
-
         LiveSense.INSTANCE.onPacketSend(packet);
 
     }

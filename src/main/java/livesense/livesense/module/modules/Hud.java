@@ -15,8 +15,8 @@ public class Hud {
     public static int color = new Color(129, 17, 255, 255).getRGB();
 
     public static void draw(MatrixStack matrixStack, float tickDelta) {
-        mc.textRenderer.drawWithShadow(matrixStack, LiveSense.NAME + " [" + mc.getSession().getUsername() + "]",2,2,color);
-
+        mc.textRenderer.drawWithShadow(matrixStack, LiveSense.NAME + " [" + mc.getSession().getUsername() + "] ",2,2,color);
+        mc.textRenderer.drawWithShadow(matrixStack, "[XYZ] " + (int)mc.player.getX() +", " + (int)mc.player.getZ(),2,10,color);
 
         /**
          *      int y = 15;
@@ -31,7 +31,7 @@ public class Hud {
          */
 
 
-        int y = 15;
+        int y = 20;
         ModuleManager.getModules().sort(Comparator.comparingInt((Module module) -> module.getName().length()).reversed());
         for(Module m : ModuleManager.getModules()) {
 

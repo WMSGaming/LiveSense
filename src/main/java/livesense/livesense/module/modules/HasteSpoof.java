@@ -15,11 +15,13 @@ public class HasteSpoof extends Module {
 
     @Override
     public void onTick(){
+        if(nullCheck()){return;}
         mc.player.addStatusEffect(new StatusEffectInstance(HASTE, 100, 2, false, false, false));
 
     }
     @Override
     public void onDisable(){
+        if(nullCheck()){return;}
         if(mc.player.hasStatusEffect(HASTE)){
             mc.player.removeStatusEffect(HASTE);
         }

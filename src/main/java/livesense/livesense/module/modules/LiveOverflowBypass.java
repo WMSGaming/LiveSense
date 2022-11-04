@@ -19,6 +19,8 @@ public class LiveOverflowBypass extends Module {
     @Override
     public void onPacketSend(Packet p) {
 
+
+
         if(p instanceof PlayerMoveC2SPacket){
             double x = ((int)(((PlayerMoveC2SPacket) p).getX(mc.player.getX()) * 100)) / 100.0;
             double z = ((int)(((PlayerMoveC2SPacket) p).getZ(mc.player.getZ()) * 100)) / 100.0;

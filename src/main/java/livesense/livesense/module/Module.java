@@ -2,6 +2,7 @@ package livesense.livesense.module;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.network.Packet;
+import net.minecraft.text.Text;
 
 public class Module {
     public static MinecraftClient mc = MinecraftClient.getInstance();
@@ -27,6 +28,8 @@ public class Module {
     public void onTick(){}
 
     public void onPacketSend(Packet<?> packet){}
+
+    public void onPacketReceive(Packet<?> packet){}
 
     public void onEnable(){}
 
@@ -69,6 +72,9 @@ public class Module {
     public boolean nullCheck() {
         return mc.player == null || mc.world == null; // Borrowed from l4j cos good idea :)
         //https://github.com/Logging4J/AutoLog.CC/blob/master/src/main/java/cc/l4j/autolog/AutoLog.java
+    }
+    public static void sendMessage(String msg){
+        MinecraftClient.getInstance().player.sendMessage(Text.of(msg)); // from autolog.cc aswell cos yes
     }
     public enum Category{
         COMBAT("Combat"),
