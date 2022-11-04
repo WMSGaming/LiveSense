@@ -4,7 +4,6 @@
   "package": "livesense.livesense.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ChatMessageC2SPacketAccessor",
     "ClientPlayNetworkHandlerMixin",
     "KeyboardMixin",
     "MinecraftClientMixin",
