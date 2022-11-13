@@ -13,7 +13,6 @@ public class ModuleManager {
 
         modules.add(new Flight());
         modules.add(new LiveOverflowBypass());
-        modules.add(new ChatSuffix());
         modules.add(new PacketFly());
         modules.add(new SurvivalSpoof());
         modules.add(new NoFall());
