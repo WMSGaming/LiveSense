@@ -6,4 +6,4 @@ Utility client aimed at the LiveOverflow server
 https://github.com/WMSGaming/LiveSense/wiki
 
 
-Maybe discontinued due to being banned from the server and proxy :skull:
+
